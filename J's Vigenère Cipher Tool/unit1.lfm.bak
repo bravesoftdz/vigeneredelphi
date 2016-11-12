@@ -1,0 +1,312 @@
+object Form1: TForm1
+  Left = 845
+  Height = 857
+  Top = 165
+  Width = 1031
+  Caption = 'Form1'
+  ClientHeight = 857
+  ClientWidth = 1031
+  LCLVersion = '1.6.0.4'
+  object Label1: TLabel
+    Left = 419
+    Height = 31
+    Top = 24
+    Width = 195
+    Caption = 'Vigenère Cipher'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -27
+    Font.Name = 'Helvetica'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label2: TLabel
+    Left = 438
+    Height = 24
+    Top = 64
+    Width = 156
+    Caption = 'Vigenère-Chiffre'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -21
+    Font.Name = 'Helvetica'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label4: TLabel
+    Left = 24
+    Height = 24
+    Top = 546
+    Width = 83
+    Caption = 'Plaintext'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -21
+    Font.Name = 'Helvetica'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label5: TLabel
+    Left = 24
+    Height = 24
+    Top = 688
+    Width = 145
+    Caption = 'Encrypted Text'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -21
+    Font.Name = 'Helvetica'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label6: TLabel
+    Left = 862
+    Height = 24
+    Top = 688
+    Width = 146
+    Caption = 'Decrypted Text'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -21
+    Font.Name = 'Helvetica'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label7: TLabel
+    Left = 370
+    Height = 18
+    Top = 472
+    Width = 70
+    Caption = 'Schlüssel'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -16
+    Font.Name = 'Helvetica'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label8: TLabel
+    Left = 386
+    Height = 18
+    Top = 552
+    Width = 54
+    Caption = 'Klartext'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -16
+    Font.Name = 'Helvetica'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label9: TLabel
+    Left = 24
+    Height = 18
+    Top = 720
+    Width = 145
+    Caption = 'Verschlüsselter Text'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -16
+    Font.Name = 'Helvetica'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label10: TLabel
+    Left = 864
+    Height = 18
+    Top = 720
+    Width = 144
+    Caption = 'Entschlüsselter Text'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -16
+    Font.Name = 'Helvetica'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+  end
+  object plainmemo: TMemo
+    Left = 24
+    Height = 80
+    Top = 584
+    Width = 416
+    TabOrder = 1
+  end
+  object encryptmemo: TMemo
+    Left = 24
+    Height = 83
+    Top = 752
+    Width = 416
+    TabOrder = 2
+  end
+  object decryptmemo: TMemo
+    Left = 592
+    Height = 85
+    Top = 750
+    Width = 416
+    TabOrder = 3
+  end
+  object Button1: TButton
+    Left = 270
+    Height = 50
+    Top = 688
+    Width = 170
+    Caption = 'Encrypt | Verschlüssel'
+    OnClick = Button1Click
+    TabOrder = 4
+  end
+  object Button2: TButton
+    Left = 592
+    Height = 50
+    Top = 688
+    Width = 170
+    Caption = 'Decrypt | Entschlüssel'
+    OnClick = Button2Click
+    TabOrder = 5
+  end
+  object Label11: TLabel
+    Left = 24
+    Height = 24
+    Top = 466
+    Width = 37
+    Caption = 'Key'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -21
+    Font.Name = 'Helvetica'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+  end
+  object BitBtn1: TBitBtn
+    Left = 816
+    Height = 48
+    Top = 24
+    Width = 192
+    DefaultCaption = True
+    Kind = bkClose
+    ModalResult = 11
+    OnClick = BitBtn1Click
+    TabOrder = 11
+  end
+  object stringgrid1: TStringGrid
+    Left = 480
+    Height = 528
+    Top = 136
+    Width = 528
+    ColCount = 26
+    DefaultColWidth = 20
+    DefaultRowHeight = 20
+    RowCount = 26
+    TabOrder = 8
+    Visible = False
+  end
+  object button3: TButton
+    Left = 636
+    Height = 56
+    Top = 372
+    Width = 216
+    Caption = 'Vigenère Square | Vigenère-Quadrat'
+    OnClick = button3Click
+    TabOrder = 7
+  end
+  object keyedit: TEdit
+    Left = 24
+    Height = 23
+    Top = 504
+    Width = 416
+    TabOrder = 0
+  end
+  object Button4: TButton
+    Left = 24
+    Height = 57
+    Top = 136
+    Width = 416
+    Caption = 'Clear Everything                     |                    Alles Löschen'
+    OnClick = Button4Click
+    TabOrder = 6
+  end
+  object BitBtn2: TBitBtn
+    Left = 24
+    Height = 50
+    Top = 24
+    Width = 192
+    DefaultCaption = True
+    Kind = bkHelp
+    OnClick = BitBtn2Click
+    TabOrder = 10
+  end
+  object Label12: TLabel
+    Left = 24
+    Height = 18
+    Top = 344
+    Width = 100
+    Caption = 'Anmerkungen'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -16
+    Font.Name = 'Helvetica'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label13: TLabel
+    Left = 24
+    Height = 68
+    Top = 372
+    Width = 413
+    Caption = '1. Die Verschlüsselung einer Nachricht setzt ein Schlüsselwort,'#13#10'    die Nachricht bzw. den Klartext voraus.'#13#10'2. Die Entschlüsselung einer Nachricht setzt einen '#13#10'    verschlüsselten Text und den passenden Schlüssel voraus.'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -15
+    Font.Name = 'Helvetica'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label14: TLabel
+    Left = 24
+    Height = 18
+    Top = 224
+    Width = 85
+    Caption = 'Annotations'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -16
+    Font.Name = 'Helvetica'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label15: TLabel
+    Left = 24
+    Height = 68
+    Top = 256
+    Width = 411
+    Caption = '1. Encrypting a message requires a keyword and the message '#13#10'   (plaintext).'#13#10'2. Decrypting a message requires an encrypted text and'#13#10'    the corresponding key.'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -15
+    Font.Name = 'Helvetica'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+  end
+  object Button5: TButton
+    Left = 480
+    Height = 27
+    Top = 776
+    Width = 72
+    Caption = 'thanks to'
+    OnClick = Button5Click
+    TabOrder = 9
+  end
+end
